@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="21" type="file" uuid="5648dbac-f472-4c5e-b5f2-42e4b5841644">
+    <property name="canvasHeight" value="1000"/>
+    <property name="canvasWidth" value="1000"/>
+    <property name="canvasX" value="0"/>
+    <property name="canvasY" value="0"/>
+    <node name="root" prototype="core.network" renderedChild="combine4">
+        <node name="change_case1" position="-33.00,10.00" prototype="string.change_case"/>
+        <node name="colorize1" position="-46.00,53.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#d0d0d0ff"/>
+        </node>
+        <node name="colorize10" position="1.00,48.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#c50006ff"/>
+        </node>
+        <node name="colorize11" position="4.00,48.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#585858ff"/>
+        </node>
+        <node name="colorize3" position="-40.00,31.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#ffffff00"/>
+            <port name="stroke" type="color" value="#c50006ff"/>
+            <port name="strokeWidth" type="float" value="1.0"/>
+        </node>
+        <node name="colorize4" position="-2.00,48.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#fdfdfdff"/>
+        </node>
+        <node name="colorize5" position="-4.00,57.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#ffffffff"/>
+        </node>
+        <node name="colorize6" position="-16.00,41.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#ffffffff"/>
+            <port name="stroke" type="color" value="#ffffffff"/>
+        </node>
+        <node name="colorize7" position="-11.00,50.00" prototype="corevector.colorize"/>
+        <node name="colorize8" position="-54.00,45.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#960052ff"/>
+        </node>
+        <node name="colorize9" position="-40.00,46.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#9d9a9cff"/>
+            <port name="stroke" type="color" value="#fffffff0"/>
+        </node>
+        <node name="combine1" position="-9.00,16.00" prototype="list.combine"/>
+        <node comment="вся карта в сборе" name="combine2" position="-8.00,52.00" prototype="list.combine"/>
+        <node name="combine3" position="-4.00,56.00" prototype="list.combine"/>
+        <node comment="полная сборка" name="combine4" position="-8.00,61.00" prototype="list.combine"/>
+        <node name="combine5" position="-2.00,50.00" prototype="list.combine"/>
+        <node name="compound1" position="-57.00,34.00" prototype="corevector.compound">
+            <port name="function" type="string" value="intersected"/>
+        </node>
+        <node name="convert_range1" position="-64.00,36.00" prototype="math.convert_range">
+            <port name="target_end" type="float" value="255.0"/>
+        </node>
+        <node name="convert_range2" position="-33.00,33.00" prototype="math.convert_range">
+            <port name="source_end" type="float" value="10.0"/>
+            <port name="target_end" type="float" value="255.0"/>
+        </node>
+        <node name="convert_range3" position="-49.00,36.00" prototype="math.convert_range">
+            <port name="target_end" type="float" value="50.0"/>
+        </node>
+        <node name="convert_range4" position="-30.00,33.00" prototype="math.convert_range">
+            <port name="target_end" type="float" value="255.0"/>
+        </node>
+        <node name="count1" position="-13.00,32.00" prototype="list.count"/>
+        <node name="ellipse1" position="-36.00,28.00" prototype="corevector.ellipse">
+            <port name="width" type="float" value="48.0"/>
+            <port name="height" type="float" value="48.0"/>
+        </node>
+        <node name="ellipse2" position="-46.00,48.00" prototype="corevector.ellipse"/>
+        <node name="filter_data1" position="-29.00,3.00" prototype="data.filter_data">
+            <port name="key" type="string" value="Колонка"/>
+            <port name="op" type="string" value="&gt;="/>
+            <port name="value" type="string" value="11"/>
+        </node>
+        <node name="filter_data2" position="-32.00,3.00" prototype="data.filter_data">
+            <port name="key" type="string" value="Колонка"/>
+            <port name="op" type="string" value="&lt;"/>
+            <port name="value" type="string" value="11"/>
+        </node>
+        <node name="frame2" position="-27.00,22.00" prototype="core.frame"/>
+        <node comment="загружаем CSV" name="import_csv1" position="-35.00,-2.00" prototype="data.import_csv">
+            <port name="file" type="string" value="РЖД.csv"/>
+        </node>
+        <node name="import_svg1" position="-57.00,25.00" prototype="corevector.import_svg">
+            <port name="file" type="string" value="map-equirectangular_test_3.svg"/>
+            <port name="position" type="point" value="0.00,-14.00"/>
+        </node>
+        <node name="lat" position="-42.00,6.00" prototype="data.lookup">
+            <port name="key" type="string" value="Latitude"/>
+        </node>
+        <node name="line1" position="-13.00,28.00" prototype="corevector.line">
+            <port name="point1" type="point" value="-179.00,-35.00"/>
+            <port name="point2" type="point" value="195.00,43.00"/>
+            <port name="points" type="int" value="33"/>
+        </node>
+        <node name="lon" position="-45.00,6.00" prototype="data.lookup">
+            <port name="key" type="string" value="Longitude"/>
+        </node>
+        <node name="lookup1" position="-26.00,9.00" prototype="data.lookup">
+            <port name="key" type="string" value="Колонка"/>
+        </node>
+        <node name="lookup10" position="-54.00,39.00" prototype="data.lookup">
+            <port name="key" type="string" value="a"/>
+        </node>
+        <node name="lookup2" position="-22.00,9.00" prototype="data.lookup">
+            <port name="key" type="string" value="Ряд"/>
+        </node>
+        <node name="lookup3" position="-29.00,9.00" prototype="data.lookup">
+            <port name="key" type="string" value="Колонка"/>
+        </node>
+        <node name="lookup4" position="-19.00,9.00" prototype="data.lookup">
+            <port name="key" type="string" value="Ряд"/>
+        </node>
+        <node name="lookup5" position="-33.00,9.00" prototype="data.lookup">
+            <port name="key" type="string" value="Суб РФ"/>
+        </node>
+        <node name="lookup6" position="-64.00,28.00" prototype="data.lookup">
+            <port name="key" type="string" value="густота"/>
+        </node>
+        <node name="lookup7" position="-40.00,22.00" prototype="data.lookup">
+            <port name="key" type="string" value="относ"/>
+        </node>
+        <node name="lookup9" position="-50.00,32.00" prototype="data.lookup">
+            <port name="key" type="string" value="Колонка"/>
+        </node>
+        <node name="make_point1" position="-5.00,13.00" prototype="corevector.make_point"/>
+        <node name="make_point2" position="-9.00,13.00" prototype="corevector.make_point"/>
+        <node comment="точки на карте в равнопрожуточной проекции проекции" name="make_point3" position="-45.00,9.00" prototype="corevector.make_point"/>
+        <node name="make_table1" position="-54.00,37.00" prototype="data.make_table">
+            <port name="headers" type="string" value="a;b"/>
+        </node>
+        <node name="max1" position="-60.00,32.00" prototype="math.max"/>
+        <node name="min1" position="-63.00,32.00" prototype="math.min"/>
+        <node name="multiply1" position="-40.00,24.00" prototype="math.multiply">
+            <port name="value2" type="float" value="2.0"/>
+        </node>
+        <node name="negate1" position="-42.00,7.00" prototype="math.negate"/>
+        <node name="number2" position="-12.00,16.00" prototype="math.number">
+            <port name="value" type="float" value="100.0"/>
+        </node>
+        <node name="point1" position="-13.00,29.00" prototype="corevector.point"/>
+        <node name="range1" position="-19.00,34.00" prototype="math.range">
+            <port name="start" type="float" value="55.0"/>
+        </node>
+        <node name="range2" position="-33.00,31.00" prototype="math.range">
+            <port name="end" type="float" value="100.0"/>
+        </node>
+        <node name="range3" position="-49.00,34.00" prototype="math.range">
+            <port name="end" type="float" value="100.0"/>
+        </node>
+        <node name="rect3" position="-11.00,49.00" prototype="corevector.rect">
+            <port name="position" type="point" value="5.60,1.87"/>
+            <port name="width" type="float" value="1000.0"/>
+            <port name="height" type="float" value="1000.0"/>
+        </node>
+        <node name="rect5" position="-54.00,29.00" prototype="corevector.rect">
+            <port name="position" type="point" value="228.00,-237.00"/>
+            <port name="width" type="float" value="454.0"/>
+            <port name="height" type="float" value="235.0"/>
+        </node>
+        <node name="reverse1" position="-46.00,40.00" prototype="list.reverse"/>
+        <node name="reverse2" position="-57.00,28.00" prototype="list.reverse"/>
+        <node name="rgb_color1" position="-33.00,35.00" prototype="color.rgb_color">
+            <port name="red" type="float" value="40.0"/>
+            <port name="green" type="float" value="40.0"/>
+            <port name="blue" type="float" value="40.0"/>
+        </node>
+        <node comment="цвет оттеночной карты" name="rgb_color2" position="-64.00,38.00" prototype="color.rgb_color">
+            <port name="red" type="float" value="25.0"/>
+            <port name="green" type="float" value="25.0"/>
+            <port name="blue" type="float" value="25.0"/>
+            <port name="range" type="float" value="60.0"/>
+        </node>
+        <node name="rgb_color3" position="-30.00,35.00" prototype="color.rgb_color">
+            <port name="red" type="float" value="40.0"/>
+            <port name="green" type="float" value="40.0"/>
+            <port name="blue" type="float" value="40.0"/>
+        </node>
+        <node name="scale1" position="-36.00,21.00" prototype="corevector.scale">
+            <port name="scale" type="point" value="5000.00,5000.00"/>
+            <port name="origin" type="point" value="9.00,2.00"/>
+        </node>
+        <node comment="увеличиваем мосштаб карты и ставим ее в угол" name="scale2" position="-45.00,10.00" prototype="corevector.scale">
+            <port name="scale" type="point" value="250.00,500.00"/>
+            <port name="origin" type="point" value="10.00,-12.00"/>
+        </node>
+        <node name="scale4" position="-57.00,26.00" prototype="corevector.scale">
+            <port name="scale" type="point" value="250.00,-500.00"/>
+            <port name="origin" type="point" value="12.00,7.00"/>
+        </node>
+        <node name="slice10" position="-57.00,38.00" prototype="list.slice">
+            <port name="size" type="int" value="85"/>
+        </node>
+        <node name="slice12" position="-19.00,39.00" prototype="list.slice">
+            <port name="size" type="int" value="1"/>
+        </node>
+        <node name="slice6" position="-27.00,42.00" prototype="list.slice">
+            <port name="size" type="int" value="1"/>
+        </node>
+        <node name="slice7" position="-24.00,36.00" prototype="list.slice">
+            <port name="size" type="int" value="1"/>
+        </node>
+        <node name="slice8" position="-57.00,29.00" prototype="list.slice">
+            <port name="start_index" type="int" value="1"/>
+            <port name="size" type="int" value="84"/>
+        </node>
+        <node name="slice9" position="-49.00,43.00" prototype="list.slice">
+            <port name="size" type="int" value="1"/>
+        </node>
+        <node comment="сортируем файл по колонке &quot;Колонка&quot; (будущая Х координата для тайлов)" name="sort1" position="-33.00,0.00" prototype="list.sort">
+            <port name="key" type="string" value="Колонка"/>
+        </node>
+        <node name="sort2" position="-54.00,38.00" prototype="list.sort">
+            <port name="key" type="string" value="b"/>
+        </node>
+        <node comment="для убирания отступа между европейсуой и восточной частью РФ" name="subtract1" position="-26.00,10.00" prototype="math.subtract">
+            <port name="value2" type="float" value="1.0"/>
+        </node>
+        <node name="textpath2" position="-2.00,47.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="                           железных дорог и                   на 1000 кв.км. по регионам России"/>
+            <port name="font_name" type="string" value="Verdana Полужирный"/>
+            <port name="font_size" type="float" value="40.0"/>
+            <port name="align" type="string" value="LEFT"/>
+            <port name="position" type="point" value="-458.00,-436.00"/>
+            <port name="width" type="float" value="767.0"/>
+        </node>
+        <node name="textpath3" position="-9.00,28.00" prototype="corevector.textpath">
+            <port name="font_name" type="string" value="Montserrat-Bold"/>
+            <port name="font_size" type="float" value="14.0"/>
+        </node>
+        <node name="textpath4" position="1.00,47.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="Протяженность"/>
+            <port name="font_name" type="string" value="Verdana Полужирный"/>
+            <port name="font_size" type="float" value="40.0"/>
+            <port name="align" type="string" value="LEFT"/>
+            <port name="position" type="point" value="-458.00,-436.00"/>
+            <port name="width" type="float" value="736.0"/>
+        </node>
+        <node name="textpath5" position="-6.00,54.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="Artem Schtschennikow"/>
+            <port name="font_size" type="float" value="20.0"/>
+            <port name="align" type="string" value="LEFT"/>
+            <port name="position" type="point" value="-458.00,478.00"/>
+        </node>
+        <node name="textpath6" position="-2.00,54.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="DATA JOURNALISM | HSE | 2018"/>
+            <port name="font_size" type="float" value="20.0"/>
+            <port name="align" type="string" value="RIGHT"/>
+            <port name="position" type="point" value="478.00,478.00"/>
+        </node>
+        <node name="textpath7" position="4.00,47.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="плотность"/>
+            <port name="font_name" type="string" value="Verdana Полужирный"/>
+            <port name="font_size" type="float" value="40.0"/>
+            <port name="align" type="string" value="LEFT"/>
+            <port name="position" type="point" value="-417.00,-388.00"/>
+            <port name="width" type="float" value="736.0"/>
+        </node>
+        <node name="translate2" position="-9.00,29.00" prototype="corevector.translate">
+            <port name="translate" type="point" value="0.00,16.00"/>
+        </node>
+        <node name="ungroup1" position="-57.00,27.00" prototype="corevector.ungroup"/>
+        <conn input="sort1.list" output="import_csv1"/>
+        <conn input="filter_data1.data" output="sort1"/>
+        <conn input="filter_data2.data" output="sort1"/>
+        <conn input="lookup1.list" output="filter_data1"/>
+        <conn input="lookup3.list" output="filter_data2"/>
+        <conn input="scale1.shape" output="combine1"/>
+        <conn input="combine1.list1" output="make_point2"/>
+        <conn input="combine1.list2" output="make_point1"/>
+        <conn input="lookup4.list" output="filter_data1"/>
+        <conn input="lookup2.list" output="filter_data2"/>
+        <conn input="make_point2.y" output="lookup2"/>
+        <conn input="make_point1.y" output="lookup4"/>
+        <conn input="subtract1.value1" output="lookup1"/>
+        <conn input="make_point1.x" output="subtract1"/>
+        <conn input="lookup5.list" output="sort1"/>
+        <conn input="lookup6.list" output="sort1"/>
+        <conn input="convert_range1.value" output="lookup6"/>
+        <conn input="min1.values" output="lookup6"/>
+        <conn input="max1.values" output="lookup6"/>
+        <conn input="convert_range1.source_start" output="min1"/>
+        <conn input="convert_range1.source_end" output="max1"/>
+        <conn input="translate2.shape" output="textpath3"/>
+        <conn input="colorize4.shape" output="textpath2"/>
+        <conn input="colorize7.shape" output="rect3"/>
+        <conn input="make_point3.y" output="negate1"/>
+        <conn input="scale2.shape" output="make_point3"/>
+        <conn input="line1.points" output="number2"/>
+        <conn input="point1.value" output="line1"/>
+        <conn input="count1.list" output="point1"/>
+        <conn input="range1.end" output="count1"/>
+        <conn input="range1.step" output="number2"/>
+        <conn input="slice7.list" output="point1"/>
+        <conn input="slice7.start_index" output="range1"/>
+        <conn input="range1.start" output="frame2"/>
+        <conn input="slice9.list" output="convert_range3"/>
+        <conn input="slice9.start_index" output="frame2"/>
+        <conn input="scale4.shape" output="import_svg1"/>
+        <conn input="ungroup1.shape" output="scale4"/>
+        <conn input="colorize1.fill" output="rgb_color2"/>
+        <conn input="lookup9.list" output="import_csv1"/>
+        <conn input="make_table1.list2" output="lookup9"/>
+        <conn input="sort2.list" output="make_table1"/>
+        <conn input="lookup10.list" output="sort2"/>
+        <conn input="colorize8.fill" output="rgb_color2"/>
+        <conn input="combine2.list1" output="colorize7"/>
+        <conn input="reverse2.list" output="ungroup1"/>
+        <conn input="slice8.list" output="reverse2"/>
+        <conn input="colorize8.shape" output="lookup10"/>
+        <conn input="colorize9.shape" output="slice10"/>
+        <conn input="rgb_color1.alpha" output="convert_range2"/>
+        <conn input="slice6.list" output="rgb_color1"/>
+        <conn input="colorize9.fill" output="slice6"/>
+        <conn input="convert_range2.value" output="range2"/>
+        <conn input="combine2.list3" output="colorize9"/>
+        <conn input="combine2.list6" output="colorize6"/>
+        <conn input="rgb_color2.alpha" output="convert_range1"/>
+        <conn input="slice6.start_index" output="frame2"/>
+        <conn input="slice12.list" output="rgb_color3"/>
+        <conn input="slice12.start_index" output="frame2"/>
+        <conn input="colorize6.fill" output="slice12"/>
+        <conn input="convert_range4.value" output="range2"/>
+        <conn input="rgb_color3.blue" output="convert_range4"/>
+        <conn input="rgb_color3.green" output="convert_range4"/>
+        <conn input="rgb_color3.red" output="convert_range4"/>
+        <conn input="textpath3.position" output="scale1"/>
+        <conn input="change_case1.string" output="lookup5"/>
+        <conn input="textpath3.text" output="change_case1"/>
+        <conn input="compound1.shape1" output="slice8"/>
+        <conn input="compound1.shape2" output="rect5"/>
+        <conn input="make_table1.list1" output="compound1"/>
+        <conn input="slice10.list" output="compound1"/>
+        <conn input="combine2.list4" output="colorize1"/>
+        <conn input="combine4.list1" output="combine2"/>
+        <conn input="combine3.list1" output="textpath5"/>
+        <conn input="combine3.list2" output="textpath6"/>
+        <conn input="colorize5.shape" output="combine3"/>
+        <conn input="combine4.list7" output="colorize5"/>
+        <conn input="combine2.list5" output="colorize3"/>
+        <conn input="lat.list" output="sort1"/>
+        <conn input="negate1.value" output="lat"/>
+        <conn input="lon.list" output="sort1"/>
+        <conn input="make_point3.x" output="lon"/>
+        <conn input="ellipse1.position" output="scale1"/>
+        <conn input="ellipse2.position" output="slice7"/>
+        <conn input="colorize1.shape" output="ellipse2"/>
+        <conn input="lookup7.list" output="sort1"/>
+        <conn input="multiply1.value1" output="lookup7"/>
+        <conn input="ellipse1.width" output="multiply1"/>
+        <conn input="ellipse1.height" output="multiply1"/>
+        <conn input="line1.point1" output="scale2"/>
+        <conn input="line1.point2" output="scale1"/>
+        <conn input="make_point2.x" output="lookup3"/>
+        <conn input="reverse1.list" output="convert_range3"/>
+        <conn input="convert_range3.value" output="range3"/>
+        <conn input="ellipse2.width" output="slice9"/>
+        <conn input="ellipse2.height" output="slice9"/>
+        <conn input="colorize3.shape" output="ellipse1"/>
+        <conn input="colorize6.shape" output="translate2"/>
+        <conn input="combine2.list2" output="colorize8"/>
+        <conn input="combine2.list7" output="combine5"/>
+        <conn input="colorize10.shape" output="textpath4"/>
+        <conn input="combine5.list2" output="colorize10"/>
+        <conn input="combine5.list1" output="colorize4"/>
+        <conn input="colorize11.shape" output="textpath7"/>
+        <conn input="combine5.list3" output="colorize11"/>
+    </node>
+</ndbx>
